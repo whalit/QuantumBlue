@@ -63,7 +63,8 @@ with cols[0]:
 with cols[1]:
     with st.container():
         records = [
-            f"##### {value['timestamp'].split('.')[0]} \n\n {value['side']} - {value.get('last_move','')}"
+            f"##### {value['timestamp'].split('.')[0]} \n {value['side']} - {value.get('last_move','')}"
                 for key, value in st.session_state['moves'].items()
         ]
+        # html( "<p>" + '\n\n'.join(records) + "</p>", scrolling=True)
         stx.scrollableTextbox('\n\n'.join(records), height = 500, border=True)
