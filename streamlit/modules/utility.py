@@ -11,7 +11,7 @@ def apply_css():
     """
     Apply CSS styling to the app.
     """
-    st.markdown('<link rel="stylesheet" href="style.css">', unsafe_allow_html=True)
+    st.markdown('<link rel="stylesheet" href="streamlit\style.css">', unsafe_allow_html=True)
 
 
 def set_page(title='Chess', page_icon="♟️"):
@@ -22,11 +22,13 @@ def set_page(title='Chess', page_icon="♟️"):
         initial_sidebar_state="expanded",
         menu_items={
             'Get Help':
-                'https://github.com/fsmosca/streamlit-chess-board/issues',
+                'https://github.com/dakotalock/QuantumBlue',
             'Report a bug':
-                "https://github.com/fsmosca/streamlit-chess-board/issues",
-            'About': "# A Streamlit chess board"
+                "https://github.com/dakotalock/QuantumBlue",
+            'About': "# Streamlit chessboard"
         }
     )
 
     apply_css()
+
+    st.title('Streamlit Chessboard')
